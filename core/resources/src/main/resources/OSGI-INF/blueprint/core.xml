@@ -33,7 +33,7 @@
 			<entry key="completer.name" value="profileNameCompleter"/>
 		</service-properties>
 	</service>
-	
+
 	<bean id="dataSourceResources" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="org.hsqldb.jdbcDriver" />
 		<property name="url" value="jdbc:hsqldb:file:databases/iaas/resources;hsqldb.default_table_type=cached;shutdown=true" />

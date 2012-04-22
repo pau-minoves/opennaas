@@ -7,14 +7,10 @@
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>org.opennaas.core.resources</artifactId>
-	<name>OpenNaaS :: Core :: Resources</name>
+	<name>OpenNaaS :: Core</name>
 	<description>OpenNaaS Resources Core Components </description>
 	<packaging>bundle</packaging>
 	<dependencies>
-		<dependency>
-			<groupId>org.opennaas</groupId>
-			<artifactId>org.opennaas.core.persistence</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>org.opennaas</groupId>
 			<artifactId>org.opennaas.core.features</artifactId>
@@ -22,6 +18,10 @@
 		<dependency>
 			<groupId>org.apache.servicemix.specs</groupId>
 			<artifactId>org.apache.servicemix.specs.jaxb-api-2.2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.servicemix.bundles</groupId>
+			<artifactId>org.apache.servicemix.bundles.commons-dbcp</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.karaf.shell</groupId>
@@ -32,8 +32,38 @@
 			<artifactId>org.apache.felix.gogo.runtime</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.osgi.compendium</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.openjpa</groupId>
+			<artifactId>openjpa</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.osgi</groupId>
+			<artifactId>spring-osgi-core</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>com.springsource.org.hsqldb</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.easymock</groupId>
@@ -70,7 +100,6 @@
 			<artifactId>paxexam-karaf-container</artifactId>
 			<scope>compile</scope>
 		</dependency>
-		
 	</dependencies>
 	<build>
 		<plugins>
@@ -97,8 +126,14 @@
 							com.google.common.*;resolution:=optional,
 							org.slf4j,
 							org.osgi.framework,
+							javax.persistence,
+							org.w3c.dom,
+							javax.xml.parsers,
+							org.slf4j,
 							*
 						</Import-Package>
+						<Export-Package>org.opennaas.core.persistence.*;version="${project.version}"</Export-Package>
+						<Private-Package>org.opennaas.core.hsqldb.internal</Private-Package>
 						<Meta-Persistence>META-INF/persistence.xml</Meta-Persistence>
 					</instructions>
 				</configuration>

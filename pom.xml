@@ -98,16 +98,6 @@
 			</dependency>
 			<dependency>
 				<groupId>org.opennaas</groupId>
-				<artifactId>org.opennaas.core.hsqldb</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.opennaas</groupId>
-				<artifactId>org.opennaas.core.persistence</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.opennaas</groupId>
 				<artifactId>org.opennaas.core.resources</artifactId>
 				<version>${project.version}</version>
 			</dependency>
