@@ -415,7 +415,7 @@
 			</dependency>
 			<dependency>
 				<groupId>org.osgi</groupId>
-				<artifactId>org.osgi.enterprise</artifactId>
+					<artifactId>org.osgi.enterprise</artifactId>
 				<version>${osgi.version}</version>
 			</dependency>
 			<dependency>
@@ -925,7 +925,7 @@
 			<!-- Features -->
 			<dependency>
 				<groupId>org.apache.servicemix</groupId>
-				<artifactId>apache-servicemix</artifactId>
+				<artifactId>apache-servicemix-minimal</artifactId>
 				<version>${servicemix.version}</version>
 				<type>tar.gz</type>
 			</dependency>
