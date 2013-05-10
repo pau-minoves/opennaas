@@ -83,10 +83,11 @@
 		<pax.logging.version>1.6.5</pax.logging.version>
 		<plexus.api.version>1.0-alpha-32</plexus.api.version>
 		<plexus.utils.version>2.0.5</plexus.utils.version>
-		<servicemix.version>4.4.1-fuse-03-06</servicemix.version>
+		<servicemix.version>4.5.1</servicemix.version>
 		<servicemix.specs.version>1.8.0</servicemix.specs.version>
 		<servicemix.velocity.version>1.7_1</servicemix.velocity.version>
-		<servicemix.xerces.version>2.9.1_4</servicemix.xerces.version>
+		<!-- <servicemix.xerces.version>2.9.1_4</servicemix.xerces.version> -->
+		<servicemix.xerces.version>2.11.0_1</servicemix.xerces.version>
 		<servicemix.cglib.version>2.1_3_6</servicemix.cglib.version>
 		<servicemix.serp.version>1.13.1_4</servicemix.serp.version>
 		<servicemix.javax-inject.version>1_2</servicemix.javax-inject.version>
@@ -1230,6 +1231,16 @@
 	</build>
 	<repositories>
 		<repository>
+			<id>apache</id>
+			<name>Apache Releases</name>
+			<url>https://repository.apache.org/content/repositories/releases/</url>
+		</repository>
+		<repository>
+			<id>Maven-central</id>
+			<name>Maven central</name>
+			<url>http://repo1.maven.org/maven2</url>
+		</repository>
+		<repository>
 			<id>maven.i2cat.net</id>
 			<name>maven.i2cat.net-releases</name>
 			<url>http://maven.i2cat.net:8081/artifactory/libs-release-local</url>
@@ -1255,11 +1266,6 @@
 			<name>SpringSource Enterprise Bundle Repository - SpringSource Bundle
 				Releases</name>
 			<url>http://repository.springsource.com/maven/bundles/release</url>
-		</repository>
-		<repository>
-			<id>Maven-central</id>
-			<name>Maven central</name>
-			<url>http://repo1.maven.org/maven2</url>
 		</repository>
 		<repository>
 			<id>osp4j</id>
