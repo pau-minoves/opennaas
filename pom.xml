@@ -72,7 +72,7 @@
 		<karaf.version>2.2.2-fuse-04-06</karaf.version>
 		<log4j.version>1.2.16</log4j.version>
 		<mantychore.version>${project.version}</mantychore.version>
-		<netconf4j.version>0.0.3</netconf4j.version>
+		<netconf4j.version>0.0.4</netconf4j.version>
 		<nmr.version>1.5.1-fuse-03-06</nmr.version>
 		<openjpa.version>2.2.0</openjpa.version>
 		<opennaas.version>${project.version}</opennaas.version>
@@ -83,7 +83,7 @@
 		<pax.logging.version>1.6.5</pax.logging.version>
 		<plexus.api.version>1.0-alpha-32</plexus.api.version>
 		<plexus.utils.version>2.0.5</plexus.utils.version>
-		<servicemix.version>4.5.1</servicemix.version>
+		<servicemix.version>4.5.0</servicemix.version>
 		<servicemix.specs.version>1.8.0</servicemix.specs.version>
 		<servicemix.velocity.version>1.7_1</servicemix.velocity.version>
 		<!-- <servicemix.xerces.version>2.9.1_4</servicemix.xerces.version> -->
@@ -1233,38 +1233,56 @@
 		<repository>
 			<id>apache</id>
 			<name>Apache Releases</name>
-			<url>https://repository.apache.org/content/repositories/releases/</url>
+			<url>https://repository.apache.org/content/repositories/releases</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
 		</repository>
 		<repository>
-			<id>Maven-central</id>
+			<id>maven-central</id>
 			<name>Maven central</name>
 			<url>http://repo1.maven.org/maven2</url>
 		</repository>
 		<repository>
-			<id>maven.i2cat.net</id>
-			<name>maven.i2cat.net-releases</name>
-			<url>http://maven.i2cat.net:8081/artifactory/libs-release-local</url>
+			<id>servicemix</id>
+			<name>Service Mix</name>
+			<url>https://svn.apache.org/repos/asf/servicemix/m2-repo/</url>
 		</repository>
 		<repository>
-			<id>i2cat</id>
-			<name>i2cat maven repository</name>
+			<id>i2cat libs-release-local</id>
+			<name>i2CAT Local releases</name>
+			<url>http://maven.i2cat.net:8081/artifactory/libs-release-local</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>i2cat libs-release</id>
+			<name>i2CAT Releases</name>
 			<url>http://maven.i2cat.net:8081/artifactory/libs-release</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
 		</repository>
 		<repository>
 			<id>i2cat libs-snapshot-local</id>
-			<name>maven.i2cat.net-snapshots</name>
+			<name>i2CAT Local snapshot</name>
 			<url>http://maven.i2cat.net:8081/artifactory/libs-snapshot-local</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
 		</repository>
 		<repository>
 			<id>springsource-external</id>
-			<name>SpringSource Enterprise Bundle Repository - External Bundle
-				Releases</name>
+			<name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
 			<url>http://repository.springsource.com/maven/bundles/external</url>
 		</repository>
 		<repository>
 			<id>springsource-releases</id>
-			<name>SpringSource Enterprise Bundle Repository - SpringSource Bundle
-				Releases</name>
+			<name>SpringSource Enterprise Bundle Repository - SpringSource Bundle Releases</name>
 			<url>http://repository.springsource.com/maven/bundles/release</url>
 		</repository>
 		<repository>
