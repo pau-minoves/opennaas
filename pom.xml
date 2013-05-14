@@ -69,7 +69,7 @@
 		<jslt.version>1.2</jslt.version>
 		<jsp-api.version>2.1</jsp-api.version>
 		<junit.version>4.10</junit.version>
-		<karaf.version>2.2.2-fuse-04-06</karaf.version>
+		<karaf.version>2.2.10</karaf.version> <!-- matching servicemix  4.5.1 bundled karaf -->
 		<log4j.version>1.2.16</log4j.version>
 		<mantychore.version>${project.version}</mantychore.version>
 		<netconf4j.version>0.0.4</netconf4j.version>
@@ -83,7 +83,7 @@
 		<pax.logging.version>1.6.5</pax.logging.version>
 		<plexus.api.version>1.0-alpha-32</plexus.api.version>
 		<plexus.utils.version>2.0.5</plexus.utils.version>
-		<servicemix.version>4.5.0</servicemix.version>
+		<servicemix.version>4.5.1</servicemix.version>
 		<servicemix.specs.version>1.8.0</servicemix.specs.version>
 		<servicemix.velocity.version>1.7_1</servicemix.velocity.version>
 		<!-- <servicemix.xerces.version>2.9.1_4</servicemix.xerces.version> -->
