@@ -1,11 +1,16 @@
 package org.opennaas.itests.helpers;
 
-import static org.openengsb.labs.paxexam.karaf.options.KarafDistributionOption.*;
-import static org.ops4j.pax.exam.CoreOptions.*;
+import static org.apache.karaf.tooling.exam.options.KarafDistributionOption.configureConsole;
+import static org.apache.karaf.tooling.exam.options.KarafDistributionOption.editConfigurationFilePut;
+import static org.apache.karaf.tooling.exam.options.KarafDistributionOption.karafDistributionConfiguration;
+import static org.ops4j.pax.exam.CoreOptions.compendiumProfile;
+import static org.ops4j.pax.exam.CoreOptions.composite;
+import static org.ops4j.pax.exam.CoreOptions.maven;
+import static org.ops4j.pax.exam.CoreOptions.mavenBundle;
 
 import java.io.File;
 
-import org.openengsb.labs.paxexam.karaf.options.KarafDistributionBaseConfigurationOption;
+import org.apache.karaf.tooling.exam.options.KarafDistributionBaseConfigurationOption;
 import org.ops4j.pax.exam.Option;
 import org.ops4j.pax.exam.options.extra.VMOption;
 

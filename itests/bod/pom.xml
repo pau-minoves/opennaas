@@ -42,8 +42,5 @@
 			<groupId>org.opennaas.itests</groupId>
 			<artifactId>org.opennaas.itests.helpers</artifactId>
 		</dependency>
-		
-		
 	</dependencies>
-
 </project>

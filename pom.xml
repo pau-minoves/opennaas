@@ -55,6 +55,7 @@
 		<junit.version>4.10</junit.version>
 		<pax.exam2.version>2.3.0</pax.exam2.version>
 		<paxexam-karaf-container.version>0.5.1</paxexam-karaf-container.version>
+		<karaf.tooling.exam>2.3.1</karaf.tooling.exam>
 		<pax.logging.version>1.6.5</pax.logging.version>
 
 		<!-- Persistence dependencies -->
@@ -921,16 +922,19 @@
 			</dependency>
 			<!-- Integration tests -->
 			<dependency>
-				<groupId>org.openengsb.labs.paxexam.karaf</groupId>
-				<artifactId>paxexam-karaf-container</artifactId>
-				<version>${paxexam-karaf-container.version}</version>
-				<scope>test</scope>
+				<groupId>org.apache.karaf.tooling.exam</groupId>
+				<artifactId>org.apache.karaf.tooling.exam.container</artifactId>
+				<version>${karaf.tooling.exam}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.karaf.tooling.exam</groupId>
+				<artifactId>org.apache.karaf.tooling.exam.options</artifactId>
+				<version>${karaf.tooling.exam}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.ops4j.pax.exam</groupId>
 				<artifactId>pax-exam-junit4</artifactId>
 				<version>${pax.exam2.version}</version>
-				<scope>test</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.ops4j.pax.swissbox</groupId>

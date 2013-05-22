@@ -1,6 +1,6 @@
 package org.opennaas.itests.vcpe;
 
-import static org.openengsb.labs.paxexam.karaf.options.KarafDistributionOption.keepRuntimeFolder;
+import static org.apache.karaf.tooling.exam.options.KarafDistributionOption.keepRuntimeFolder;
 import static org.opennaas.itests.helpers.OpennaasExamOptions.includeFeatures;
 import static org.opennaas.itests.helpers.OpennaasExamOptions.noConsole;
 import static org.opennaas.itests.helpers.OpennaasExamOptions.opennaasDistributionConfiguration;
@@ -149,12 +149,16 @@ public class SPVCPETemplateTest {
 		Domain domain = (Domain) VCPENetworkModelHelper.getElementByTemplateName(model, SPTemplateConstants.AUTOBAHN);
 		Assert.assertNotNull(domain);
 		Assert.assertTrue(domain.getInterfaces().size() >= 6);
-		Assert.assertNotNull(VCPENetworkModelHelper.getElementByTemplateName(domain.getInterfaces(), SPTemplateConstants.INTER1_PHY_INTERFACE_AUTOBAHN));
+		Assert.assertNotNull(VCPENetworkModelHelper.getElementByTemplateName(domain.getInterfaces(),
+				SPTemplateConstants.INTER1_PHY_INTERFACE_AUTOBAHN));
 		Assert.assertNotNull(VCPENetworkModelHelper.getElementByTemplateName(domain.getInterfaces(), SPTemplateConstants.DOWN1_PHY_INTERFACE_AUTOBAHN));
-		Assert.assertNotNull(VCPENetworkModelHelper.getElementByTemplateName(domain.getInterfaces(), SPTemplateConstants.INTER2_PHY_INTERFACE_AUTOBAHN));
+		Assert.assertNotNull(VCPENetworkModelHelper.getElementByTemplateName(domain.getInterfaces(),
+				SPTemplateConstants.INTER2_PHY_INTERFACE_AUTOBAHN));
 		Assert.assertNotNull(VCPENetworkModelHelper.getElementByTemplateName(domain.getInterfaces(), SPTemplateConstants.DOWN2_PHY_INTERFACE_AUTOBAHN));
-		Assert.assertNotNull(VCPENetworkModelHelper.getElementByTemplateName(domain.getInterfaces(), SPTemplateConstants.CLIENT1_PHY_INTERFACE_AUTOBAHN));
-		Assert.assertNotNull(VCPENetworkModelHelper.getElementByTemplateName(domain.getInterfaces(), SPTemplateConstants.CLIENT1_PHY_INTERFACE_AUTOBAHN));
+		Assert.assertNotNull(VCPENetworkModelHelper.getElementByTemplateName(domain.getInterfaces(),
+				SPTemplateConstants.CLIENT1_PHY_INTERFACE_AUTOBAHN));
+		Assert.assertNotNull(VCPENetworkModelHelper.getElementByTemplateName(domain.getInterfaces(),
+				SPTemplateConstants.CLIENT1_PHY_INTERFACE_AUTOBAHN));
 		Assert.assertTrue(VCPENetworkModelHelper.getInterfaces(model.getElements()).containsAll(domain.getInterfaces()));
 
 	}

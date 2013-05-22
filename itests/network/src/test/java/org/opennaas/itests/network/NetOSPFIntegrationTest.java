@@ -1,8 +1,8 @@
 package org.opennaas.itests.network;
 
+import static org.apache.karaf.tooling.exam.options.KarafDistributionOption.keepRuntimeFolder;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.openengsb.labs.paxexam.karaf.options.KarafDistributionOption.keepRuntimeFolder;
 import static org.opennaas.itests.helpers.OpennaasExamOptions.includeFeatures;
 import static org.opennaas.itests.helpers.OpennaasExamOptions.includeTestHelper;
 import static org.opennaas.itests.helpers.OpennaasExamOptions.noConsole;

@@ -1,16 +1,17 @@
 package org.opennaas.itests.bod;
 
-import static org.openengsb.labs.paxexam.karaf.options.KarafDistributionOption.keepRuntimeFolder;
-import static org.opennaas.itests.helpers.OpennaasExamOptions.includeFeatures;
-import static org.opennaas.itests.helpers.OpennaasExamOptions.includeTestHelper;
-import static org.opennaas.itests.helpers.OpennaasExamOptions.noConsole;
-import static org.opennaas.itests.helpers.OpennaasExamOptions.opennaasDistributionConfiguration;
-import static org.ops4j.pax.exam.CoreOptions.options;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
+
+import static org.apache.karaf.tooling.exam.options.KarafDistributionOption.configureConsole;
+import static org.apache.karaf.tooling.exam.options.KarafDistributionOption.editConfigurationFilePut;
+import static org.apache.karaf.tooling.exam.options.KarafDistributionOption.karafDistributionConfiguration;
+import static org.apache.karaf.tooling.exam.options.KarafDistributionOption.keepRuntimeFolder;
+import static org.ops4j.pax.exam.Option.*;
+import static org.ops4j.pax.exam.CoreOptions.*;
+import static org.opennaas.itests.helpers.OpennaasExamOptions.*;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -44,13 +45,16 @@ import org.opennaas.extensions.network.model.NetworkModelHelper;
 import org.opennaas.extensions.network.model.topology.Interface;
 import org.opennaas.extensions.network.model.topology.Link;
 import org.opennaas.itests.helpers.AbstractKarafCommandTest;
-import org.ops4j.pax.exam.Option;
+import static org.opennaas.itests.helpers.OpennaasExamOptions.*;
+
 import org.ops4j.pax.exam.junit.Configuration;
 import org.ops4j.pax.exam.junit.ExamReactorStrategy;
 import org.ops4j.pax.exam.junit.JUnit4TestRunner;
 import org.ops4j.pax.exam.spi.reactors.EagerSingleStagedReactorFactory;
 import org.ops4j.pax.exam.util.Filter;
+import org.ops4j.pax.exam.Option;
 import org.osgi.service.blueprint.container.BlueprintContainer;
+import org.ops4j.pax.exam.CoreOptions;
 
 @RunWith(JUnit4TestRunner.class)
 @ExamReactorStrategy(EagerSingleStagedReactorFactory.class)

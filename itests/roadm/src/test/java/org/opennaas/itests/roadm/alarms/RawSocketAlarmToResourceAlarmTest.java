@@ -1,6 +1,6 @@
 package org.opennaas.itests.roadm.alarms;
 
-import static org.openengsb.labs.paxexam.karaf.options.KarafDistributionOption.keepRuntimeFolder;
+import static org.apache.karaf.tooling.exam.options.KarafDistributionOption.keepRuntimeFolder;
 import static org.opennaas.itests.helpers.OpennaasExamOptions.includeFeatures;
 import static org.opennaas.itests.helpers.OpennaasExamOptions.includeTestHelper;
 import static org.opennaas.itests.helpers.OpennaasExamOptions.noConsole;

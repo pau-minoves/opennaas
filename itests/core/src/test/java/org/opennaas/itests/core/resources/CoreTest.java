@@ -1,11 +1,11 @@
 package org.opennaas.itests.core.resources;
 
 import static java.util.concurrent.TimeUnit.SECONDS;
+import static org.apache.karaf.tooling.exam.options.KarafDistributionOption.keepRuntimeFolder;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
-import static org.openengsb.labs.paxexam.karaf.options.KarafDistributionOption.keepRuntimeFolder;
 import static org.opennaas.itests.helpers.OpennaasExamOptions.includeFeatures;
 import static org.opennaas.itests.helpers.OpennaasExamOptions.noConsole;
 import static org.opennaas.itests.helpers.OpennaasExamOptions.opennaasDistributionConfiguration;
