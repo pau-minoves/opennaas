@@ -53,7 +53,7 @@
 		<!-- Testing dependencies -->
 		<easymock.version>3.1</easymock.version>
 		<junit.version>4.10</junit.version>
-		<pax.exam2.version>2.3.0</pax.exam2.version>
+		<pax.exam2.version>2.6.0</pax.exam2.version>
 		<paxexam-karaf-container.version>0.5.1</paxexam-karaf-container.version>
 		<karaf.tooling.exam>2.3.1</karaf.tooling.exam>
 		<pax.logging.version>1.6.5</pax.logging.version>
@@ -971,10 +971,17 @@
 				<version>${hibernate.jpa-api.version}</version>
 			</dependency>
 			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>14.0.1</version>
+			</dependency>
+			<!--
+			<dependency>
 				<groupId>com.googlecode.guava-osgi</groupId>
 				<artifactId>guava-osgi</artifactId>
 				<version>${guava.version}</version>
 			</dependency>
+			-->
 			<dependency>
 				<groupId>joda-time</groupId>
 				<artifactId>joda-time</artifactId>
